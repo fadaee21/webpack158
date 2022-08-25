@@ -1,2 +1,4 @@
-import sum from './sum'
-console.log(sum(3, 2))
+import Button from "./components/button/button";
+
+const button = new Button();
+button.render()

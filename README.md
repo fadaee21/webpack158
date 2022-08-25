@@ -1,14 +1,24 @@
 # webpack145
 
 
-Npm init –y 
+add css file and import to button.js
 
-npm i webpack webpack-cli -D  
+Error:
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
 
-Change "build" of the package json 
 
-Pack 2 files together: npm build 
+resolve:
+https://webpack.js.org/loaders/css-loader/#root
+npm install --save-dev style-loader css-loader
 
-Add config->create file :webpack.config.js 
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+};
 
-Error : ** absolute path ** =>  use require and resolve
