@@ -1,0 +1,25 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+/* Define standard variables and values for website */
+$bgcolor: lightblue;
+
+/* Use the variables */
+body {
+  background-color: $bgcolor;
+}
+
+
+.btn-dark {
+    color: #fff;
+    background-color: #111;
+    padding: 10px;
+    border: 1px solid green;
+    outline: none;
+  }
+  
+  .text-info {
+    color: darkcyan;
+    font-weight: 800;
+  }
+  

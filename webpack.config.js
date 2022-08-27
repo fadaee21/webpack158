@@ -4,7 +4,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, "./dist")
+        path: path.resolve(__dirname, "./dist"),
+        assetModuleFilename: 'images/[name][ext][query]'
     },
     module: {
         rules: [
@@ -23,8 +24,12 @@ module.exports = {
                     "sass-loader",
                 ],
             },
+            {
+                test: /\.png/,
+                type: 'asset/resource'
+            }
         ],
-
     },
     mode: 'development'
+
 }

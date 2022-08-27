@@ -1,5 +1,3 @@
-import './button.css'
-import './body.scss'
 class Button {
     render() {
         const button = document.createElement("button");
