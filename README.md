@@ -1,21 +1,26 @@
 # webpack145
 
-پلاگین برای کاهش حجم فایل باندل
+MiniCssExtractPlugin
+This plugin extracts CSS into separate files.
 
-terser:
-https://webpack.js.org/plugins/terser-webpack-plugin/#root
-
-
-npm install terser-webpack-plugin --save-dev
+npm install --save-dev mini-css-extract-plugin
 
 add to config:
 
-const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 plugins:[
-  new TerserPlugin()
+new TerserPlugin()
 ]
 
-برای استفاده از پلاگین ها باید ذر قسمت 
-plugins:[]
-استفاده شوند
+in module.rules->
+// use: ["style-loader", "css-loader"],
+use: [MiniCssExtractPlugin.loader, "css-loader"],
+change: "style-loader" to MiniCssExtractPlugin.loader
+
+finally add new main.css has generated to html:
+
+  <link rel="stylesheet" href="./dist/main.css">
+
+change the name and define a path use option :
+new MiniCssExtractPlugin({filename: 'css/style.css'})
