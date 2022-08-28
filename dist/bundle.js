@@ -610,6 +610,46 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/components/alert/alert.js":
+/*!***************************************!*\
+  !*** ./src/components/alert/alert.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Alert12)\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\nvar Alert12 = /*#__PURE__*/function () {\n  function Alert12() {\n    _classCallCheck(this, Alert12);\n  }\n\n  _createClass(Alert12, [{\n    key: \"render\",\n    value: function render() {\n      var para = document.createElement(\"p\");\n      para.textContent = \"my life be like\";\n      para.className = \"alert alert-info\";\n      document.querySelector(\"body\").append(para);\n    }\n  }]);\n\n  return Alert12;\n}();\n\n\n\n//# sourceURL=webpack://webpack158/./src/components/alert/alert.js?");
+
+/***/ }),
+
+/***/ "./src/components/button/button.js":
+/*!*****************************************!*\
+  !*** ./src/components/button/button.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\nvar Button = /*#__PURE__*/function () {\n  function Button() {\n    _classCallCheck(this, Button);\n  }\n\n  _createClass(Button, [{\n    key: \"render\",\n    value: function render() {\n      var button = document.createElement(\"button\");\n      button.textContent = \"say Hello\";\n      button.className = \"btn-dark\";\n      var body = document.querySelector(\"body\");\n      body.appendChild(button);\n\n      button.onclick = function () {\n        var para = document.createElement(\"p\");\n        para.innerText = \"Hello World\";\n        para.classList.add(\"text-info\");\n        body.appendChild(para);\n      };\n    }\n  }]);\n\n  return Button;\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);\n\n//# sourceURL=webpack://webpack158/./src/components/button/button.js?");
+
+/***/ }),
+
+/***/ "./src/components/image/Image.js":
+/*!***************************************!*\
+  !*** ./src/components/image/Image.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _assets_webpack_image_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/webpack_image.png */ \"./src/assets/webpack_image.png\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\n\n\nvar Image = /*#__PURE__*/function () {\n  function Image() {\n    _classCallCheck(this, Image);\n  }\n\n  _createClass(Image, [{\n    key: \"render\",\n    value: function render() {\n      var img = document.createElement('img');\n      img.alt = 'webpackImage';\n      img.src = _assets_webpack_image_png__WEBPACK_IMPORTED_MODULE_0__;\n      img.width = 450;\n      var body = document.querySelector(\"body\");\n      body.appendChild(img);\n    }\n  }]);\n\n  return Image;\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Image);\n\n//# sourceURL=webpack://webpack158/./src/components/image/Image.js?");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_all_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/all.scss */ \"./src/style/all.scss\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var _components_button_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/button/button */ \"./src/components/button/button.js\");\n/* harmony import */ var _components_image_Image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/image/Image */ \"./src/components/image/Image.js\");\n/* harmony import */ var _components_alert_alert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/alert/alert */ \"./src/components/alert/alert.js\");\n\n\n\n\n\nvar button = new _components_button_button__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nbutton.render();\nvar image = new _components_image_Image__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\nimage.render();\nvar alert = new _components_alert_alert__WEBPACK_IMPORTED_MODULE_4__[\"default\"]();\nalert.render();\n\n//# sourceURL=webpack://webpack158/./src/index.js?");
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
 /*!*********************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.esm.js ***!
@@ -737,46 +777,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 /***/ ((module) => {
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://webpack158/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
-
-/***/ }),
-
-/***/ "./src/components/alert/alert.js":
-/*!***************************************!*\
-  !*** ./src/components/alert/alert.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Alert12)\n/* harmony export */ });\nclass Alert12 {\n    render() {\n        const para = document.createElement(\"p\")\n        para.textContent = \"my life be like\"\n        para.className = \"alert alert-info\"\n        document.querySelector(\"body\").append(para)\n    }\n}\n\n//# sourceURL=webpack://webpack158/./src/components/alert/alert.js?");
-
-/***/ }),
-
-/***/ "./src/components/button/button.js":
-/*!*****************************************!*\
-  !*** ./src/components/button/button.js ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Button {\n    render() {\n        const button = document.createElement(\"button\");\n        button.textContent = \"say Hello\";\n        button.className = \"btn-dark\";\n        const body = document.querySelector(\"body\");\n        body.appendChild(button);\n\n\n        button.onclick = () => {\n            const para = document.createElement(\"p\")\n            para.innerText = \"Hello World\"\n            para.classList.add(\"text-info\")\n            body.appendChild(para)\n        }\n    }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);\n\n//# sourceURL=webpack://webpack158/./src/components/button/button.js?");
-
-/***/ }),
-
-/***/ "./src/components/image/Image.js":
-/*!***************************************!*\
-  !*** ./src/components/image/Image.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _assets_webpack_image_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/webpack_image.png */ \"./src/assets/webpack_image.png\");\n\r\n\r\nclass Image{\r\n    render() {\r\n        const img = document.createElement('img');\r\n        img.alt = 'webpackImage';\r\n        img.src = _assets_webpack_image_png__WEBPACK_IMPORTED_MODULE_0__;\r\n        img.width = 450;\r\n        const body = document.querySelector(\"body\");\r\n        body.appendChild(img);\r\n    }\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Image);\n\n//# sourceURL=webpack://webpack158/./src/components/image/Image.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_all_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/all.scss */ \"./src/style/all.scss\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var _components_button_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/button/button */ \"./src/components/button/button.js\");\n/* harmony import */ var _components_image_Image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/image/Image */ \"./src/components/image/Image.js\");\n/* harmony import */ var _components_alert_alert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/alert/alert */ \"./src/components/alert/alert.js\");\n\n\n\n\n\n\nconst button = new _components_button_button__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nbutton.render()\n\nconst image = new _components_image_Image__WEBPACK_IMPORTED_MODULE_3__[\"default\"]()\nimage.render()\n\nconst alert = new _components_alert_alert__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\nalert.render()\n\n\n//# sourceURL=webpack://webpack158/./src/index.js?");
 
 /***/ }),
 
