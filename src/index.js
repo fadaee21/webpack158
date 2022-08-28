@@ -1,5 +1,5 @@
 import './style/all.scss'
-import bootstrap from 'bootstrap'
+import 'bootstrap'
 import Button from "./components/button/button";
 import Image from "./components/image/Image"
 import Alert12 from "./components/alert/alert";

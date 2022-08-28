@@ -1,40 +1,19 @@
 # webpack145
 
-you must use contenthash for naming
-filename: 'bundle[contenthash].js'
-filename: 'css/style[contenthash].css'
+EslintWebpackPlugin
 
-it cause some problem that to fix them you need these plugins
+This plugin uses eslint to find and fix problems in your JavaScript code
 
-**\_\_\_\_**clean-webpack-plugin\***\*\_\*\***
+npm install eslint-webpack-plugin --save-dev
 
-this plugin will remove all files inside webpack's output. path directory, as well as all unused webpack assets after every successful rebuild.
+const ESLintPlugin = require('eslint-webpack-plugin');
 
-npm install --save-dev clean-webpack-plugin
+plugins: [new ESLintPlugin()]
 
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+create .eslint and add configuration into it
 
-**\_\_\_\_**HtmlWebpackPlugin**\*\***\_**\*\***
 
-useful for webpack bundles that include a hash in the filename which changes every compilation.
+for extend use ["eslint:recommended"] or pick one of the more popular ESLint configuration by large companies and follow their guidance.
+(npx install-peerdeps --dev eslint-config-airbnb
+"extends": ["airbnb"],)
 
-npm install --save-dev html-webpack-plugin
-
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-plugins: [
-  new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            template: "index.html",
-            // publicPath: "./dist/" //*only for build mode
-        })
-]
-
-اگر بخواهیم فایل ها را داخل سرور بارگزاری کنیم 
-
-فایل اصلی index.html در فولدر dist  قرار دارد و در این صورت سرور دچار خطا میشود چون فایل اصلی باید در روت و خارج از dist  باشد اگر فایل را از dist خارج کنیم برای آدرس های css & js که در فایل index.html هست دجار مشکل می شویم و دیگر جاوااسکریپت و سی اس اس دیگر لود نمی شوند 
-
-برای حل این مشکل از آپشن دیگری که در html plugin هست استفاده میکنیم تا همیشه آدرس سی اس اس و جی اس در فایل ایندکس یک dist/ اضافه میکنیم تا بعدا که قصد خارج کردن فایل index.htmlاز پوشه dist در سرور را داشتیم دچار مشکل نشویم 
- 
-
-نکته بعدی اینکه این عمل فقط برای حالتی که قصد Production کردن برای سرور را داریم باید استفاده شود 
