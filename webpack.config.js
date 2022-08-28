@@ -1,11 +1,14 @@
 const path = require("path")
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js',
+        filename: 'bundle[contenthash].js',
         path: path.resolve(__dirname, "./dist"),
         assetModuleFilename: 'images/[name][ext][query]'
     },
@@ -45,7 +48,12 @@ module.exports = {
     plugins: [
         new TerserPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'css/style.css'
+            filename: 'css/style[contenthash].css'
+        }),
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: "index.html",
+            // publicPath: "./dist/" //*only for build mode
         })
     ],
     mode: 'development'
