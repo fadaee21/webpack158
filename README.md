@@ -1,25 +1,21 @@
 # webpack145
 
-babel:
-https://webpack.js.org/loaders/babel-loader/
+پلاگین برای کاهش حجم فایل باندل
+
+terser:
+https://webpack.js.org/plugins/terser-webpack-plugin/#root
 
 
-npm install -D babel-loader @babel/core @babel/preset-env webpack
+npm install terser-webpack-plugin --save-dev
 
 add to config:
 
-{
-test: /\.m?js$/,
-exclude: /node_modules/,
-  use: {
-    loader: 'babel-loader',
-  }
-}
+const TerserPlugin = require("terser-webpack-plugin");
 
-create .babelrc and add into:
+plugins:[
+  new TerserPlugin()
+]
 
-{
-  "presets": ["@babel/preset-env"]
-}
-
-
+برای استفاده از پلاگین ها باید ذر قسمت 
+plugins:[]
+استفاده شوند
