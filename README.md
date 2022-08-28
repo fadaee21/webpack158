@@ -1,19 +1,24 @@
 # webpack145
 
-EslintWebpackPlugin
+Code Splitting 
 
-This plugin uses eslint to find and fix problems in your JavaScript code
+برای وروودی های مختلف خروجی های مختلف خواهیم داشت 
 
-npm install eslint-webpack-plugin --save-dev
+add all entry:
+  entry: {
+        index: './src/index.js',
+        alert: './src/alert.js'
+    },
 
-const ESLintPlugin = require('eslint-webpack-plugin');
-
-plugins: [new ESLintPlugin()]
-
-create .eslint and add configuration into it
+* before there was only index, now split alert from index and add this
 
 
-for extend use ["eslint:recommended"] or pick one of the more popular ESLint configuration by large companies and follow their guidance.
-(npx install-peerdeps --dev eslint-config-airbnb
-"extends": ["airbnb"],)
+
+
+
+
+
+
+
+
 

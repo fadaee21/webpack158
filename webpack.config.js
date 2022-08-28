@@ -5,10 +5,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
+
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        alert: './src/alert.js'
+    },
     output: {
-        filename: 'bundle[contenthash].js',
+        filename: '[name].bundle.[contenthash].js',
         path: path.resolve(__dirname, "./dist"),
         assetModuleFilename: 'images/[name][ext][query]'
     },
@@ -55,8 +59,20 @@ module.exports = {
             template: "index.html",
             // publicPath: "./dist/" //*only for build mode
         }),
+
         new ESLintPlugin()
     ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "./dist"),
+        },
+        //don't remove files in dist folder
+        devMiddleware: {
+            writeToDisk: true
+        },
+        compress: true,
+        port: 9000,
+    },
     mode: 'development'
 
 }

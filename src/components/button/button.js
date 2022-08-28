@@ -7,11 +7,13 @@ class Button {
         body.appendChild(button);
 
 
+
         button.onclick = () => {
             const para = document.createElement("p")
             para.innerText = "Hello World"
             para.classList.add("text-info")
             body.appendChild(para)
+
         }
     }
 }

@@ -1,4 +1,6 @@
-export default class Alert12 {
+import 'bootstrap'
+
+class Alert12 {
     render() {
         const para = document.createElement("p")
         para.textContent = "my life be like"
@@ -6,3 +8,6 @@ export default class Alert12 {
         document.querySelector("body").append(para)
     }
 }
+
+const alert = new Alert12
+alert.render()
